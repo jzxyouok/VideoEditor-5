@@ -1,0 +1,238 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  position: absolute;
+  width: 100%;
+  height:100%;
+  padding: 0;
+  margin:0;
+}
+#up{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  #options{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    .rushname{
+      text-decoration: underline;
+    }
+    #miniScope{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 150px;
+      overflow: hidden;
+      .thumb{
+        display: block;
+        height: 120px;
+        width: auto;
+        margin: auto;
+      }
+    }
+  }
+  #scope{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    #scopePlayer{
+      position: relative;
+      background: black;
+      margin: auto;
+      overflow: hidden;
+      .layer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        .imgInScope{
+          display: block;
+          margin: auto;
+          height: 100%;
+        }
+      }
+    }
+    #tools{
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      .btn{
+        height: 24px;
+        width: 24px;
+        margin: 0 3px 0 3px;
+        background: #6f6f6f;
+        padding: 6px 6px 2px 6px;
+        &:hover{
+          background: #8b8b8b;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+#down{
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  #rush{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    #rushDrop{
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+      white-space: nowrap;
+      &.drop_hover{
+        background-color: #6f6f6f;
+      }
+      .rushElement{
+        font-size: 13px;
+        width: 100%;
+        height: 20px;
+        background-color: #8b8b8b;
+        display: block;
+        padding: 2px;
+        margin: 2px;
+        &:hover{
+          cursor: move;
+        }
+      }
+    }
+  }
+  #timeline{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    padding: 28px 0 5px 0 !important;
+    overflow: auto;
+    #timelinesCont {
+      position: relative;
+      top: 0;
+      left: 0;
+      overflow: auto;
+      width:100%;
+      height:100%;
+      #cursor {
+        z-index: 5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 1px;
+        background-color: red;
+      }
+      .timeline {
+        position: relative;
+        z-index: 3;
+        width: 30000%;
+        height: 30%;
+        white-space: nowrap;
+        display: block;
+        margin-bottom: 0;
+        border-bottom: 1px solid #8b8b8b;
+        &.drop_hover {
+          background-color: #6f6f6f;
+        }
+        .rushElement {
+          position: absolute;
+          top: 0;
+          box-sizing: border-box;
+          z-index: 2;
+          height: 98%;
+          background-color: #8b8b8b;
+          display: inline-block;
+          padding: 5px;
+          margin: 1px 0 1px 0;
+          border: 1px outset #6b6b6b;
+          overflow: hidden;
+          &:hover {
+            cursor: move;
+          }
+        }
+        .selectedRush {
+          background-color: #ababab;
+          border: 1px solid #0b4bfb;
+        }
+        .insertBefore {
+          border-left: 2px solid red;
+          padding-left: 4px;
+        }
+      }
+      #timeGrad {
+        z-index: 3;
+        height: 15px;
+        padding: 3px;
+        width: 30000%;
+        background: #9b9b9b url("../img/grad.png") repeat-x;
+      }
+    }
+  }
+}
+.mainBlock{
+  background-color: #4f4f4f;
+  border: 2px solid #333333;
+  padding: 28px 5px 5px 5px;
+  color: #e6e6e6;
+  h1{
+    z-index: 10;
+    display: block;
+    font-size: medium;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    padding: 3px;
+    width: 100%;
+    background-color: #8b8b8b;
+  }
+}
+#downloadWindow{
+  z-index: 1400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4f4f4f;
+  border: 2px solid #333333;
+  padding: 28px 5px 5px 5px;
+  color: #e6e6e6;
+  h1{
+    z-index: 1500;
+    display: block;
+    font-size: medium;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    padding: 3px;
+    width: 100%;
+    background-color: #8b8b8b;
+  }
+  #uploadCont{
+    margin: auto;
+    width: auto;
+    text-align: center;
+  }
+}
+.hidden{
+  display: none;
+}

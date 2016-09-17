@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor Project</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+<div id="up">
+    <div id="options" class="mainBlock">
+        <h1>Options</h1>
+        <div id="optionsForm"></div>
+        <div id="miniScope" class="mainBlock">
+            <h1>Preview</h1>
+            <div id="miniScopePlayer"></div>
+        </div>
+    </div>
+    <div id="scope" class="mainBlock">
+        <h1>Scope <span id="scopeCurTime"></span><span id="scopeTotalTime"></span></h1>
+        <div id="scopePlayer"></div>
+        <div id="tools">
+            <span class="btn" id="prevbtn">|&#x25C1;</span>
+            <span class="btn" id="playbtn">&#x25B7;</span>
+            <span class="btn" id="nextbtn">&#x25B7;|</span>
+            <span class="btn" id="stopbtn">&#x25A2;</span>
+            <span class="btn" id="optionsbtn">&#x26ED;</span>
+        </div>
+    </div>
+</div>
+<div id="down">
+    <div id="rush" class="mainBlock">
+        <h1>Rush</h1>
+        <div id="rushDrop" class="dropper">
+            <div id="dropFilesHere"> + Drop files here</div>
+        </div>
+    </div>
+    <div id="timeline" class="mainBlock">
+        <h1>Timeline</h1>
+        <div id="timelinesCont">
+            <div id="cursor"></div>
+            <div id="timeGrad"></div>
+            <div id="timelineDrop0" class="dropper timeline" data-tlid="0"></div>
+            <div id="timelineDrop1" class="dropper timeline" data-tlid="1"></div>
+            <div id="timelineDrop2" class="dropper timeline" data-tlid="2"></div>
+        </div>
+    </div>
+</div>
+<div id="downloadWindow" class="hidden">
+    <h1>Upload</h1>
+    <div id="uploadCont">
+        <div class="info">
+            <h2>Résultat :</h2>
+            <div id="result"></div>
+            <div id="progressPercent">&nbsp;</div>
+            <progress id="progress" max="100" value="0" style="width:100%;"></progress>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/globales.js"></script>
+<script type="text/javascript" src="js/save.js"></script>
+<script type="text/javascript" src="js/upload.js"></script>
+<script type="text/javascript" src="js/library.js"></script>
+<script type="text/javascript" src="js/options.js"></script>
+<script type="text/javascript" src="js/dnd.js"></script>
+<script type="text/javascript" src="js/scope.js"></script>
+<script type="text/javascript" src="js/sequence.js"></script>
+<script type="text/javascript" src="js/playTL.js"></script>
+<script type="text/javascript" src="js/project.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+
+</body>
+</html>
